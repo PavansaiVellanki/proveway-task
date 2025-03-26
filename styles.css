@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 2rem;
+}
+  
+/* Top Bar */
+.top-bar {
+  background-color: #fbc02d;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+  
+/* Title */
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+  
+.title-container h1 {
+  margin: 0 10px;
+  color: #f06292;
+  font-size: 22px;
+}
+
+.title-container::before,
+.title-container::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid #ccc;
+  margin: 0 5px;
+}
+  
+/* Box Styles */
+.box {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  position: relative;
+  background-color: #fff;
+}
+  
+/* Input */
+input[type="radio"] {
+  margin-right: 10px; /* Add space between checkbox and text */
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* Box Label */
+.box-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Unit and Discount Info */
+.unit-info {
+  display: flex;
+  gap: 5px;
+  font-weight: bold;
+}
+
+.discount {
+  background-color: #ff5252;
+  color: white;
+  font-size: 12px;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+  
+/* Price Info */
+.price-info {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.price {
+  color: #2e7d32;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.strike-price {
+  text-decoration: line-through;
+  color: #ccc;
+  font-size: 12px;
+}
+  
+/* Most Popular Tag */
+.most-popular-tag {
+  background-color: #ff4081;
+  color: white;
+  font-size: 10px;
+  padding: 3px 5px;
+  border-radius: 5px;
+  position: absolute;
+  top: -5px;
+  right: 10px;
+}
+  
+/* Content (Hidden by Default) */
+.box-content {
+  display: none;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed #ccc;
+}
+  
+/* Size and Color Options */
+.size-color {
+  margin-top: 10px;
+}
+.option {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+select {
+  padding: 5px;
+  width: 100px;
+}
+  
+/* Show Content when Selected */
+input[type="radio"]:checked + .box-label + .box-content {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+  
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Total price div */
+.total-price-div {
+  display: flex;
+  justify-content: space-between;
+}
+  
+/* Free Delivery */
+.free-delivery {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+  
+/* Total Price */
+.total {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+  
+/* Add to Cart Button */
+.add-to-cart {
+  background-color: #f44336;
+  color: white;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.add-to-cart:hover {
+  background-color: #d32f2f;
+}
+  
+/* Footer */
+footer {
+  text-align: end;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #aaa;
+}  
